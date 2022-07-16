@@ -1,11 +1,8 @@
 import Express from "express";
 import connect from "./database/db.js";
 import router from "./router/routers.js";
-import dotenv from "dotenv";
-dotenv.config({ path: './env' });
 
-const url = process.env.URL
-connect(url)
+connect()
 const app = Express();
 app.use(Express.json());
 app.use(router)

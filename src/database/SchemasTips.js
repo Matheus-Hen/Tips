@@ -9,4 +9,4 @@ const Tips = new mongoose.Schema({
 });
 
 const dbTips = mongoose.model("Tips", Tips)
-export default dbTips // dbTips is the collection name
+export default dbTips 
