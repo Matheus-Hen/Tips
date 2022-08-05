@@ -11,15 +11,17 @@ class TipsController {
     }
     async setTips(req, res) {
         try {
+            if(req.body.Nome==''){
             const tips = req.body;
-            const newTips = dbTips(tips)
-            await newTips.save();
-            res.json({ message: "Tips saved" });
+            // const newTips = dbTips(tips)
+            // await newTips.save();
+            res.status(200).json({ message: "Tips saved" });}
         } catch (err) {
             res.status(500).json({ message: "Tips not saved" });
         }
     }
-
 }
 
 export default new TipsController();
+
+
